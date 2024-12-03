@@ -97,7 +97,7 @@ def get_bounding_box_center_frame(frame, model, names, object_class):
         class_name = names.get(class_id)
         bbox_coordinates.append([x1, y1, x2, y2, class_name, track_id])
 
-        distance_str = f"ID: {track_id:.2f}, {class_name}"
+        distance_str = f"ID: {track_id}, {class_name}"
         text_size, _ = cv2.getTextSize(distance_str, cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)
         
         center_x = (x1 + x2) // 2
